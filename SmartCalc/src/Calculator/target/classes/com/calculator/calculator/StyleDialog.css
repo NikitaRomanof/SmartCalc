@@ -1,0 +1,34 @@
+
+/**Costumization of The Bar where the buttons are located**/
+.dialog-pane > .button-bar > .container {
+  -fx-background-color:linear-gradient(to bottom right, #FF7F50, #6A4ACD);
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 2em 2em 2em 2em;
+   -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A4ACD);
+   -fx-text-fill:black;
+   -fx-font-size:15.0px;
+}
+
+/**Costumization of Buttons**/
+.dialog-pane .button{
+    -fx-font-size:18.0px;
+   -fx-background-color:linear-gradient(to bottom right, #FF7F50, #6A4ACD);
+   -fx-background-radius: 15;
+   -fx-border-color: #111;
+   -fx-border-radius: 15;
+   -fx-border-width: 2;
+   -fx-text-fill:black;
+   -fx-wrap-text: true;
+   -fx-cursor:hand;
+ }
+
+.dialog-pane .button:hover{
+  -fx-border-color: #FF9F99;
+ }
+
+ .dialog-pane .button:pressed{
+   -fx-background-color: #9370db;
+  }
+

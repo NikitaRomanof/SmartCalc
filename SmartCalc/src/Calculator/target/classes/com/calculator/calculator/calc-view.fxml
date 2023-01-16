@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindow" maxHeight="800" maxWidth="600" minHeight="800" minWidth="600" prefHeight="800.0" prefWidth="600.0" styleClass="mainWindow" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.calculator.CalcController">
+   <children>
+      <Pane fx:id="root" layoutX="9.0" layoutY="29.0" prefHeight="763.0" prefWidth="582.0" styleClass="mainPane">
+         <children>
+            <Pane fx:id="highlight" layoutX="7.0" layoutY="14.0" prefHeight="114.0" prefWidth="569.0" styleClass="numWindow">
+               <children>
+                  <Label fx:id="lblResult" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="14.0" prefHeight="23.0" prefWidth="547.0" text="0.0" textFill="#f8f6f6" textOverrun="LEADING_ELLIPSIS">
+                     <font>
+                        <Font name="DejaVu Sans Condensed Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOut" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="57.0" prefHeight="43.0" prefWidth="547.0" textFill="#f8f6f6" textOverrun="LEADING_ELLIPSIS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnTan" layoutX="5.0" layoutY="145.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="tan" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnCos" layoutX="99.0" layoutY="145.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="cos" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnSin" layoutX="193.0" layoutY="145.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="25.0" prefHeight="49.0" prefWidth="69.0" text="sin" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnPow" layoutX="99.0" layoutY="653.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="35.0" prefHeight="35.0" prefWidth="30.0" text="^" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnDot" layoutX="193.0" layoutY="653.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="14.0" prefHeight="35.0" prefWidth="30.0" text="." textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn0" layoutX="287.0" layoutY="653.0" onMouseClicked="#onClickedNumber" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn_equals" layoutX="382.0" layoutY="653.0" onMouseClicked="#onClickedEquals" prefHeight="100.0" prefWidth="186.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="=" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="highlight192" layoutX="287.0" layoutY="145.0" onMouseClicked="#onClickedDel" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="32.0" text="&lt;-" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnMod" layoutX="5.0" layoutY="653.0" onMouseClicked="#onClickedChar" prefHeight="100.0" prefWidth="91.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="26.0" prefHeight="49.0" prefWidth="90.0" text="mod" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <GridPane alignment="CENTER" hgap="4.0" layoutX="6.0" layoutY="248.0" prefHeight="401.0" prefWidth="562.0" vgap="4.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane fx:id="btnAtn" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="atan" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnAcs" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="acos" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnAsn" onMouseClicked="#onClickedChar" prefHeight="88.0" prefWidth="94.0" styleClass="highlight" GridPane.columnIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="asin" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnOpenBr" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="28.0" prefHeight="35.0" prefWidth="30.0" text="(" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnCloseBr" onMouseClicked="#onClickedChar" prefHeight="90.0" prefWidth="77.0" styleClass="highlight" GridPane.columnIndex="4">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="28.0" prefHeight="35.0" prefWidth="30.0" text=")" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnDiv" onMouseClicked="#onClickedChar" prefHeight="88.0" prefWidth="94.0" styleClass="highlight" GridPane.columnIndex="5">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="/" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnExp" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="27.0" prefHeight="35.0" prefWidth="30.0" text="e" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnPi" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="27.0" prefHeight="35.0" prefWidth="30.0" text="pi" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn1" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="1" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn2" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="2" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn3" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="3" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnMinus" onMouseClicked="#onClickedChar" prefHeight="98.0" prefWidth="116.0" styleClass="highlight" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="-" textAlignment="CENTER" textFill="#1e1c1c">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnSqrt" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="sqrt" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnX" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="27.0" prefHeight="35.0" prefWidth="30.0" text="x" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn4" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="4" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn5" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="5" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn6" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="6" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnPlus" onMouseClicked="#onClickedChar" prefHeight="98.0" prefWidth="118.0" styleClass="highlight" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="+" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnMul" onMouseClicked="#onClickedChar" prefHeight="98.0" prefWidth="141.0" styleClass="highlight" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="30.0" text="*">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn9" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="9" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn8" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="8" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btn7" onMouseClicked="#onClickedNumber" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="30.0" text="7" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnLn" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="ln" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="btnLog" onMouseClicked="#onClickedChar" prefHeight="58.0" prefWidth="74.0" styleClass="highlight" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="25.0" prefHeight="49.0" prefWidth="78.0" text="log" textAlignment="CENTER">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <Pane fx:id="highlight15" layoutX="382.0" layoutY="145.0" minHeight="-Infinity" onMouseClicked="#onClickedAC" prefHeight="100.0" prefWidth="186.0" styleClass="highlight">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="32.0" text="AC" textAlignment="CENTER">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="titlePane" layoutY="-1.0" prefHeight="31.0" prefWidth="600.0" style="-fx-background-radius: 30;">
+         <children>
+            <ImageView fx:id="btnClose" fitHeight="30.0" fitWidth="30.0" layoutX="549.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-close-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="23.0" fitWidth="23.0" layoutX="525.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-minimize-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnOptions" fitHeight="25.0" fitWidth="25.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-calculator-64.png" />
+               </image>
+            </ImageView>
+            <MenuButton alignment="CENTER" cache="true" contentDisplay="CENTER" depthTest="ENABLE" layoutX="54.0" layoutY="2.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="180.0" style="-fx-background-color: #222; -fx-control-inner-background: #222; -fx-base: #222;" text="SmartCalc v.3.0" textFill="WHITE">
+              <items>
+                <MenuItem id="infoMenu" fx:id="infoMenu" mnemonicParsing="false" onAction="#getInfo" style="-fx-text-fill: white;" text="Info" />
+                <MenuItem id="menuHistory" fx:id="menuHistory" mnemonicParsing="false" onAction="#getHistory" style="-fx-text-fill: white;" text="History operations" />
+                  <MenuItem id="historyClean" fx:id="historyClean" mnemonicParsing="false" onAction="#clearHistory" style="-fx-text-fill: white;" text="Clean history" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

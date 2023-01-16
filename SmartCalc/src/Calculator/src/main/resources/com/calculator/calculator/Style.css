@@ -1,0 +1,33 @@
+
+.mainWindow {
+    -fx-background-color: #222;
+    -fx-background-radius: 30;
+}
+
+.mainPane {
+    -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A4ACD);
+    -fx-background-radius: 20 20 30 30;
+}
+
+.numWindow {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 25;
+    -fx-border-color: #111;
+    -fx-border-radius: 25;
+    -fx-border-width: 3;
+}
+
+.highlight {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 25;
+    -fx-border-color: #111;
+    -fx-border-radius: 25;
+    -fx-border-width: 3;
+}
+.highlight:pressed {
+    -fx-background-color: #9370db;
+}
+
+.highlight:hover {
+    -fx-border-color: #FF9F99;
+}
